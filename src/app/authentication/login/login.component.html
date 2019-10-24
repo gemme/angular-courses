@@ -1,0 +1,14 @@
+
+<form (submit)="login()">
+
+    <div>
+        <input type="email" name="email" placeholder="email" [(ngModel)]="credentials.userName">
+    </div>
+    <div>
+        <input type="password" name="password" placeholder="password" [(ngModel)]="credentials.password">
+    </div>
+    <button type="submit">Iniciar Sesion</button>
+</form>
+
+
+
