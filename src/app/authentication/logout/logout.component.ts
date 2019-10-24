@@ -13,9 +13,9 @@ export class LogoutComponent implements OnInit {
 
   ngOnInit() {
       this.sessionService.clearSession();
-      /* this.router.navigate(['../login'],{
+      this.router.navigate(['../login'],{
         relativeTo: this.activedRoute
-      }) */
+      })
   }
 
 }
