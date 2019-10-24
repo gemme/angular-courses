@@ -7,8 +7,8 @@ import { UnauthGuard } from './guards/unauth.guard';
 
 const routes: Routes = [
   {path: 'auth', redirectTo: 'auth/login', pathMatch: "full"},
-  {path: 'auth/login', component: LoginComponent},
-  {path: 'auth/logout', component: LogoutComponent, canActivate: [UnauthGuard]},
+  {path: 'auth/login', component: LoginComponent, canActivate: [UnauthGuard]},
+  {path: 'auth/logout', component: LogoutComponent},
 ];
 
 @NgModule({

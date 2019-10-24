@@ -7,6 +7,7 @@ export class SessionService {
 
   private target = localStorage;
   private sessionItem: string = 'app-session';
+  private userItem: string = 'app-user';
   constructor() { }
 
   saveSession(data){
@@ -24,5 +25,10 @@ export class SessionService {
 
   isAuthenticated(){
     return !!this.target.getItem(this.sessionItem);
+  }
+
+  saveUser(data){
+    const dataStr = JSON.stringify(data);
+    this.target.setItem(this.userItem, dataStr);
   }
 }
