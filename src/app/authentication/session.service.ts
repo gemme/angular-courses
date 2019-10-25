@@ -26,6 +26,14 @@ export class SessionService {
     return this.target.getItem(this.sessionItem);
   }
 
+  getSessionToken() {
+    if(this.isAuthenticated()){
+      const session = this.getSession();
+      const sessionObj = JSON.parse(session);
+      return sessionObj.token;
+    }
+  }
+
   clearSession() {
     this.target.clear();
     this.authenticated.next(false);

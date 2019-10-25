@@ -27,12 +27,13 @@ export class LoginComponent implements OnInit {
   login(){
     console.log('he sido clickeado');
     this.loginService.login(this.credentials).then(response => {
-        console.log('response, response');
+        console.log('response', response);
         this.sessionService.saveSession(response);
         /* this.sessionService.saveSession(response);
         this.router.navigate(['/']); */
         const tokenStr = this.sessionService.getSession();
         this.loginService.getUserData(tokenStr).then(response => {
+          console.log('userdata', response);
           this.sessionService.saveUser(response);
           this.router.navigate(['/']);
         }).catch(err => {
