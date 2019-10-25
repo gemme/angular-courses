@@ -1,0 +1,51 @@
+<p>data-student works!</p>
+
+<form [formGroup]="form" (submit)="updateForm()">
+    <div>
+        <input type="text" formControlName="name" name="name" placeholder="Nombre">
+    </div>
+    <div>
+        <input type="email" formControlName="email"  name="email" placeholder="Email">
+    </div>
+    <div>
+        <input type="text" formControlName="username" name="username" placeholder="usuario" >
+    </div>
+    <div>
+        <input type="text" formControlName="phone" name="phone" placeholder="telefono" >
+    </div>
+    <div>
+        <input type="text" formControlName="website" name="website" placeholder="URL website" >
+    </div>
+    <div>
+        <button class="btn">Guardar</button>
+        <!-- <button>Cancelar</button> -->
+        <!-- solo un boton por formulario y agregar un anchor estilizarlo como boton -->
+        <a class="btn" routerLink="..">Cancelar</a>
+        <a class="btn" (click)="clean()">Limpiar</a>
+    </div>
+</form>
+
+{{form.valid}}
+
+<!-- <form (formGroup)="form" (submit)="updateForm()">
+        <div>
+            <input type="text" formControlName="name" name="name" placeholder="Nombre" [(ngModel)]="studentData.name">
+        </div>
+        <div>
+            <input type="email" name="email" placeholder="Email" [(ngModel)]="studentData.email">
+        </div>
+        <div>
+            <input type="text" name="username" placeholder="usuario" [(ngModel)]="studentData.username">
+        </div>
+        <div>
+            <input type="text" name="phone" placeholder="telefono" [(ngModel)]="studentData.phone">
+        </div>
+        <div>
+            <input type="text" name="website" placeholder="URL website" [(ngModel)]="studentData.website">
+        </div>
+        <div>
+            <button class="btn">Guardar</button>
+            <a class="btn" routerLink="..">Cancelar</a>
+        </div>
+    </form> -->
+    

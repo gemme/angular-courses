@@ -1,0 +1,22 @@
+<p>signup works!</p>
+<form [formGroup]="form" (submit)="signup()">
+    <div>
+        <input type="text" formControlName="name" placeholder="User">
+    </div>
+    <div>
+        <input type="email" formControlName="email" placeholder="Email">
+    </div>
+    <div>
+        <input type="password" formControlName="password" placeholder="Password">
+    </div>
+    <div>
+        <input type="password" formControlName="confirmation" placeholder="Confirm Password">
+    </div>
+    <div>
+        <button>
+            Enviar
+        </button>
+    </div>
+</form>
+
+<p>{{form.valid}}</p>
