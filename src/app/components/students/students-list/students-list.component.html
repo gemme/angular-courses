@@ -1,5 +1,23 @@
-<div>
+<!-- <div>
     <div *ngFor="let item of students">
         <a [routerLink]="item.id">{{item.name}}</a>
     </div>
 </div>
+ -->
+
+ <div>
+     <table>
+         <th [appSort]="'name'">
+            Name
+         </th>
+         <th>
+             Email
+         </th>
+         <tbody>
+            <tr *ngFor="let item of students">
+                <td>{{item.name | upperCase}}</td>
+                <td>{{item.email}}</td>
+            </tr>
+         </tbody>
+     </table>
+ </div>

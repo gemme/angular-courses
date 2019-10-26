@@ -12,6 +12,8 @@ import { StudentsComponent } from './components/students/students.component';
 import { StudentsListComponent } from './components/students/students-list/students-list.component';
 import { DataStudentComponent } from './components/students/data-student/data-student.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { SortDirective } from './shared/directives/sort.directive';
+import { UpperCasePipe } from './shared/pipes/upper-case.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { SignupComponent } from './components/signup/signup.component';
     StudentsComponent,
     StudentsListComponent,
     DataStudentComponent,
-    SignupComponent
+    SignupComponent,
+    SortDirective,
+    UpperCasePipe
   ],
   imports: [
     BrowserModule,
