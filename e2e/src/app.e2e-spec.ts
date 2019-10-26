@@ -1,5 +1,5 @@
 import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+import { browser, logging, element, by } from 'protractor';
 
 describe('workspace-project App', () => {
   let page: AppPage;
@@ -10,8 +10,24 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('courses app is running!');
+    console.log('title', page.getTitleText());
+    expect(page.getTitleText()).toEqual('Login');
   });
+
+  /* fit('got to dashboard', () => {
+    browser.get('auth/login').then(() => {
+        let email = element(by.name('email'));
+        let password = element(by.name('password'));
+        let button = element(by.id('send'));
+        email.sendKeys('user@email.com');
+        password.sendKeys('hola');
+        button.click();
+        waitsFor(() => {
+            return true;
+        });
+        expect(page.getTitleText()).toEqual('Dashboard');
+    });
+  }); */
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser

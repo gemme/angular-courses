@@ -8,7 +8,7 @@ import { StudentService } from '../student.service';
 })
 export class StudentsListComponent implements OnInit {
 
-  students: Array<any> = [];
+  students:any = [];
 
   constructor(private studentService: StudentService) { }
 
